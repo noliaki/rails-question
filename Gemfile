@@ -23,6 +23,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'typescript-rails', '0.6.1'
+
+gem 'haml-rails'
+
+gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

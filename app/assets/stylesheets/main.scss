@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import 'compass';
+
+/*----------------------------------------------------
+  setting
+/*====================================================*/
+$min-width                   : 1200px;
+$max-width                   : 1200px;
+
+$base-font-size              : 14px;
+$base-line-height            : 1.7;
+$default-font                : Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$selection-bg-color          : #333;
+$selection-color             : #fff;
+$link-color                  : #999;
+$link_linked-color           : scale_color( $link-color, $lightness: 50% );
+$link_visited-color          : scale_color( $link-color, $lightness: 30% );
+$link_hover-color            : scale_color( $link-color, $lightness: 80% );
+$link_active-color           : scale_color( $link-color, $lightness: 70% );
+
+
+/*----------------------------------------------------
+  reset
+/*====================================================*/
+@include global-reset;
+
+
+/*----------------------------------------------------
+  common
+====================================================*/
+html {
+  @extend html;
+  overflow-y: scroll;
+}
+
+body {
+  @extend body;
+  font-family: $default-font;
+  line-height: $base-line-height;
+  min-width: $min-width;
+  *zoom: 1;
+  *display: inline;
+  /* for iPhone */
+  -webkit-text-size-adjust: 100%;
+}
+
+input, textarea {
+  font-family: $default-font;
+}
+
+
+/* select color
+----------------------------------------------------*/
+::selection {
+  background: $selection-bg-color;
+  color: $selection-color;
+}
+::-moz-selection {
+  background: $selection-bg-color;
+  color: $selection-color;
+}
+
+/* link
+----------------------------------------------------*/
+a {
+  color: $link-color;
+  outline: none;
+
+  &:link {
+    color: $link_linked-color;
+  }
+
+  &:visited {
+    color: $link_visited-color;
+  }
+
+  &:hover {
+    color: $link_hover-color;
+  }
+
+  &:active {
+    color: $link_active-color;
+  }
+}
